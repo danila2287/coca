@@ -6,6 +6,6 @@
     font-display: swap;
     src:
       local($font-family),
-      url('../../fonts/#{$url}.woff2') format('woff2');
+      url('../fonts/#{$url}.woff2') format('woff2');
   }
 }
