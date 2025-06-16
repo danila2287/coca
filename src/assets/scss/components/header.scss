@@ -1,5 +1,6 @@
 .header {
   padding: 26px 0 22px;
+  background-color: transparent;
 
   @include mobile {
     padding: 22px 0 18px;
@@ -64,6 +65,7 @@
     background: var(--neutral-color-130);
     transform: translateY(8px);
     transition: background-color var(--transition);
+    cursor: pointer;
     &::before {
       content: '';
       position: absolute;
@@ -86,6 +88,11 @@
       line-height: 150%;
       text-align: center;
       color: var(--neutral-color-140);
+
+      @include small-tablet {
+        top: -28px;
+        font-size: 20px;
+      }
     }
     &-checkbox {
       appearance: none;
@@ -121,6 +128,7 @@
     color: var(--neutral-color-100);
 
     @include small-tablet {
+      font-size: 20px;
       line-height: 200%;
     }
 
