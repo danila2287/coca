@@ -6,7 +6,9 @@
   @include mini-desctop {
     padding: 67px 0 121px;
   }
-
+@include mobile{
+  min-height: calc(100dvh - 109px);
+}
   &::before,
   &::after {
     content: '';
@@ -70,7 +72,10 @@
   }
 
   &__left {
-    max-width: 595px;
+    // max-width: 595px;
+    @include mini-desctop{
+      max-width: 617px;
+    }
   }
   &__title {
     margin-bottom: 114px;
@@ -98,6 +103,11 @@
   }
   &__subtitle {
     margin-bottom: 69px;
+    & br {
+      @include mini-desctop {
+        display: none; 
+      }
+    }
   }
 
   &__form {
@@ -110,7 +120,6 @@
     @include small-mobile {
       gap: 20px;
       flex-direction: column;
-      
     }
   }
   &__input {
@@ -131,7 +140,6 @@
       max-width: 180px;
       min-width: 100px;
     }
-
   }
 
   &__btn {
@@ -227,7 +235,8 @@
     }
 
     &-body {
-      &-th {
+      &-td {
+        white-space: nowrap;
         font-size: 20px;
         font-weight: 700;
         line-height: 26px;
