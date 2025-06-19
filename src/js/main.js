@@ -8,3 +8,6 @@ useTheme();
 
 import { useBurger } from './components/burger.js';
 useBurger();
+
+import { useInsightSlider } from './components/slider.js';
+useInsightSlider();
