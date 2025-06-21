@@ -6,6 +6,9 @@
     @include mobile {
       padding: 86px 0 61px;
     }
+    @include small-mobile{
+      padding-bottom: 41px;
+    }
   }
   &__title {
     margin-bottom: 24px;

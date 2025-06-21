@@ -9,5 +9,8 @@ useTheme();
 import { useBurger } from './components/burger.js';
 useBurger();
 
-import { useInsightSlider } from './components/slider.js';
+import { useInsightSlider } from './components/home/slider.js';
 useInsightSlider();
+
+import { useTestimonialsSlider } from './components/home/slider.js';
+useTestimonialsSlider();
