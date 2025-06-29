@@ -14,3 +14,6 @@ useInsightSlider();
 
 import { useTestimonialsSlider } from './components/home/slider.js';
 useTestimonialsSlider();
+
+import { useAccordion } from './components/accordion.js';
+useAccordion();

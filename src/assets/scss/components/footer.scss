@@ -5,7 +5,7 @@
   @include mobile {
     padding-top: 62px;
   }
-  
+
   &__head {
     @include flex-align-center;
     margin-bottom: 138px;
@@ -22,20 +22,20 @@
       text-align: center;
       margin-bottom: 64px;
     }
-    @include small-mobile{
-    margin-bottom: 44px;
-  }
+    @include small-mobile {
+      margin-bottom: 44px;
+    }
   }
   &__title {
     margin-bottom: 24px;
     font-size: 64px;
     font-weight: 600;
     line-height: 120%;
-    @include tablet{
-      font-size:54px ;
+    @include tablet {
+      font-size: 54px;
     }
-    @include mobile{
-      font-size:42px ;
+    @include mobile {
+      font-size: 42px;
     }
   }
   &__descr {
@@ -73,8 +73,6 @@
         text-align: center;
         width: 100%;
       }
-      
-      
     }
     @include tablet {
       flex-direction: column;
@@ -91,9 +89,9 @@
         max-width: 600px;
       }
     }
-    @include mobile{
-        flex-direction: column-reverse;
-      }
+    @include mobile {
+      flex-direction: column-reverse;
+    }
   }
 
   &__nav {
@@ -102,6 +100,7 @@
   }
   &__list {
     @include flex-align-center;
+    justify-content: end;
     gap: 93.33px;
 
     @include mini-desctop {
@@ -116,6 +115,7 @@
     }
     @include mobile {
       text-align: center;
+      gap: 13px 60px;
     }
   }
   &__item {
@@ -127,11 +127,13 @@
     line-height: 24px;
     color: #fff;
   }
+
   &__sublist {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
+
   &__subitem {
     &-link {
       position: relative;
@@ -206,7 +208,7 @@
         gap: 20px;
       }
 
-      @include small-mobile{
+      @include small-mobile {
         gap: 10px 20px;
         flex-wrap: wrap;
         justify-content: center;
@@ -259,6 +261,42 @@
       &:hover {
         opacity: 0.8;
       }
+    }
+  }
+
+  &__sublist {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+
+    @include small-mobile {
+      max-height: 0;
+      padding: 0 15px;
+    }
+  }
+
+  &__toggle-icon {
+    display: none;
+
+    @include small-mobile {
+      display: inline-block;
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__schow {
+    max-height: none !important;
+    overflow: visible;
+
+    @include small-mobile {
+      max-height: 0 !important;
+      overflow: hidden;
+    }
+  }
+
+  &__item--active &__sublist {
+    @include small-mobile {
+      max-height: 500px;
     }
   }
 }
