@@ -1,0 +1,51 @@
+.hero-decor{
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    z-index: var(--z-index-0);
+    display: inline-block;
+    position: absolute;
+  }
+  &::before {
+    border-radius: 50%;
+    width: 551px;
+    height: 551px;
+    top: 50px;
+    left: 181px;
+    filter: blur(220px);
+    background: rgb(250, 117, 21);
+    opacity: 0.2;
+
+    @include mini-desctop {
+      left: 80px;
+      width: 351px;
+      height: 351px;
+    }
+    @include small-tablet {
+      top: 20px;
+      left: 40px;
+      width: 251px;
+      height: 251px;
+    }
+  }
+
+  &::after {
+    width: 525px;
+    height: 525px;
+    right: -400px;
+    bottom: 0px;
+    filter: blur(180px);
+    background: rgba(226, 248, 240, 0.7);
+
+    @include mini-desctop {
+      width: 325px;
+      height: 325px;
+    }
+
+    @include small-tablet {
+      width: 225px;
+      height: 225px;
+    }
+  }
+}

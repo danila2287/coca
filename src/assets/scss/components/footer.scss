@@ -126,6 +126,10 @@
     font-weight: 700;
     line-height: 24px;
     color: #fff;
+
+    @include small-mobile {
+      cursor: pointer;
+    }
   }
 
   &__sublist {

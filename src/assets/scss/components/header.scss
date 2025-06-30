@@ -65,7 +65,6 @@
     background: var(--neutral-color-130);
     transform: translateY(8px);
     transition: background-color var(--transition);
-    cursor: pointer;
     &::before {
       content: '';
       position: absolute;
