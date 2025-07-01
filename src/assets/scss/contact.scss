@@ -1,0 +1,9 @@
+@import './mixins/index';
+@import './base/index';
+@import './globals/index';
+
+//components
+@import './components/header';
+@import './components/contact/hero.scss';
+@import './components/partners.scss';
+@import './components/footer.scss';

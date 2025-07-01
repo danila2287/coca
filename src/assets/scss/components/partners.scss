@@ -8,6 +8,7 @@
   &__inner {
     @include flex-all-sb;
     gap: 5px;
+    max-width: 1100px;
 
     @include small-tablet {
       flex-direction: column;
