@@ -1,0 +1,101 @@
+.faq {
+  padding: 82px 0px 160px;
+  text-align: center;
+
+  @include mobile {
+    padding: 42px 0 80px;
+  }
+  &__container {
+    max-width: 1114px;
+  }
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -2px;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 18px;
+    }
+  }
+  &__descr {
+    margin-bottom: 80px;
+    font-weight: 500;
+    line-height: 32px;
+    color: var(--neutral-color-150);
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__accordion {
+    padding-bottom: 32px;
+    text-align-last: left;
+    border-bottom: 1px solid var(--neutral-color-30);
+
+    @include mobile{
+      padding-bottom: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 56px;
+
+      @include mobile {
+        margin-bottom: 36px;
+      }
+    }
+    &-title {
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 0%;
+      text-align: left;
+      color: var(--neutral-color-100);
+    }
+    &-text {
+      margin-top: 16px;
+      font-weight: 500;
+      line-height: 32px;
+      color: var(--neutral-color-150);
+
+      @include mobile{
+        margin-top: 10px;
+      }
+    }
+    &-icon {
+      position: relative;
+      width: 24px;
+      height: 24px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        width: 18px;
+        height: 3px;
+        border-radius: 6px;
+        background-color: var(--neutral-color-100);
+      }
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    &[open] &-icon::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__control {
+    @include flex-all-sb;
+    gap: 15px;
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-detalis-marker {
+      display: none;
+    }
+  }
+}
