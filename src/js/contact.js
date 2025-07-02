@@ -8,3 +8,6 @@ useTheme();
 
 import { useBurger } from './components/burger.js';
 useBurger();
+
+import { usePhone } from './components/contact/phone.js';
+usePhone();
