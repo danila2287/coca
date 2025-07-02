@@ -1,14 +1,13 @@
 import { defineConfig } from 'vite';
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import injectHTML from 'vite-plugin-html-inject';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   root: './src',
   base: '/coca/',
   server: {
     port: 3000,
-    open: true,
   },
   publicDir: './src/assets',
   build: {
@@ -23,6 +22,8 @@ export default defineConfig({
     },
   },
   plugins: [
+    injectHTML(),
+    ViteMinifyPlugin(),
     ViteImageOptimizer({
       png: {
         quality: 80,
@@ -31,7 +32,5 @@ export default defineConfig({
         quality: 80,
       },
     }),
-    injectHTML(),
-    ViteMinifyPlugin({}),
   ],
 });
