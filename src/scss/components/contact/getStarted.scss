@@ -23,9 +23,9 @@
       @include flex-column-all-center;
     }
     &-wrapper {
+      margin-right: 30px;
       position: absolute;
       left: 8%;
-      padding: 56px 48px;
       background-color: #fff;
       border: 1px solid var(--neutral-color-40);
       @include tablet {
@@ -50,7 +50,7 @@
       font-weight: 600;
       line-height: 44px;
       letter-spacing: -2%;
-      color: var(--neutral-color-100);
+      color: #1d1e25;
     }
     &-text {
       margin-bottom: 48px;
