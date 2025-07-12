@@ -11,6 +11,33 @@
       flex-direction: column;
       gap: 30px;
     }
+
+    &::before {
+      content: '';
+      z-index: var(--z-index-0);
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      width: 551px;
+      height: 551px;
+      top: -250px;
+      left: 181px;
+      filter: blur(220px);
+      background: rgb(250, 117, 21);
+      opacity: 0.2;
+
+      @include mini-desctop {
+        left: 80px;
+        width: 351px;
+        height: 351px;
+      }
+      @include small-tablet {
+        top: -170px;
+        left: 40px;
+        width: 251px;
+        height: 251px;
+      }
+    }
   }
   &__title {
     max-width: 480px;
@@ -35,7 +62,6 @@
       top: -450px;
       left: 0px;
       @include mini-desctop {
-// left: ;
       }
     }
     &::after {

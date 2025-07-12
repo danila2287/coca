@@ -11,3 +11,6 @@ useBurger();
 
 import { useHeroSlider } from './components/about/slider.js';
 useHeroSlider();
+
+import { useQurTeamSlider } from './components/about/slider.js';
+useQurTeamSlider();
