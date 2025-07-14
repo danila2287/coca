@@ -11,3 +11,6 @@ useBurger();
 
 import { useHeroSlider } from './components/blog/slider.js';
 useHeroSlider();
+
+import { useArticlesSlider } from './components/blog/slider.js';
+useArticlesSlider();
