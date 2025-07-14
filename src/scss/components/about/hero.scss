@@ -1,0 +1,144 @@
+.hero {
+  padding: 105px 0 165px;
+
+  @include tablet {
+    padding: 105px 0 125px;
+  }
+  @include mobile{
+    padding: 96px 0 60px ;
+  }
+  @include small-mobile{
+    padding: 96px 0 40px ;
+  }
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--neutral-color-100);
+    @include tablet {
+      margin-bottom: 90px;
+    }
+    @include mobile{
+      margin-bottom: 70px;
+      text-align: center;
+    }
+  }
+  &__wrapper {
+    margin-bottom: 135px;
+    @include flex-all-sb;
+
+    @include mini-desctop {
+      margin-bottom: 90px;
+      flex-direction: column;
+      align-items: start;
+      gap: 70px;
+    }
+    @include mobile{
+      align-items: center;
+    }
+  }
+  &__descr {
+    max-width: 838px;
+
+  @include mobile{
+    text-align: center;
+  }
+
+    &::before {
+      max-width: 76px;
+      width: 100%;
+      transform: translateY(-77px);
+    }
+  }
+  &__link {
+    @include flex-all-center;
+  }
+  &__circle {
+    position: relative;
+    height: 127px;
+    width: 127px;
+    @include tablet {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    width: 38px;
+    height: 44px;
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+    svg {
+      &patch {
+        fill: var(--neutral-color-100);
+      }
+    }
+  }
+  &__article {
+    max-width: 502px;
+    width: 100%;
+    &-img {
+      &:nth-child(2) {
+        margin-bottom: 24px;
+      }
+    }
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -1%;
+      color: var(--neutral-color-100);
+    }
+    &-descr {
+      margin-bottom: 32px;
+      max-width: 494px;
+      font-weight: 500;
+      line-height: 32px;
+      color: var(--neutral-color-150);
+    }
+    &-btn {
+      padding: 16px 34px;
+      color: #fff;
+      background-color: #1d1e25;
+
+      @include small-tablet {
+        padding: 12px 22px;
+      }
+    }
+  }
+  &__slider {
+    position: relative;
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 126px;
+      left: 44.5%;
+      transform: translateX(-68%);
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+
+      @include mini-desctop {
+        left: 53.4%;
+      }
+      @include tablet {
+        display: none;
+      }
+      @include mobile {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        top: 90px;
+        left: 96%;
+      }
+      @include small-mobile {
+        left: 95%;
+      }
+    }
+  }
+}

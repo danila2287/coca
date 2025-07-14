@@ -1,0 +1,72 @@
+.quote {
+  position: relative;
+  &__inner {
+    @include flex-all-sb;
+    gap: 15px;
+    padding: 80px 0;
+    border-top: 1px solid var(--neutral-color-150);
+    border-bottom: 1px solid var(--neutral-color-150);
+
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &::before {
+      content: '';
+      z-index: var(--z-index-0);
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      width: 551px;
+      height: 551px;
+      top: -250px;
+      left: 181px;
+      filter: blur(220px);
+      background: rgb(250, 117, 21);
+      opacity: 0.2;
+
+      @include mini-desctop {
+        left: 80px;
+        width: 351px;
+        height: 351px;
+      }
+      @include small-tablet {
+        top: -170px;
+        left: 40px;
+        width: 251px;
+        height: 251px;
+      }
+    }
+  }
+  &__title {
+    max-width: 480px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -2px;
+    color: var(--neutral-color-100);
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__descr {
+    max-width: 522px;
+    font-weight: 600;
+    line-height: 150%;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  .hero-decor {
+    &::before {
+      top: -450px;
+      left: 0px;
+      @include mini-desctop {
+      }
+    }
+    &::after {
+      bottom: -550px;
+      right: -65px;
+    }
+  }
+}

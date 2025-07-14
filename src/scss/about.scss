@@ -1,0 +1,10 @@
+@import './mixins/index';
+@import './base/index';
+@import './globals/index';
+
+//components
+@import './components/header';
+@import './components/about/hero.scss';
+@import './components/about/quote.scss';
+@import './components/about/qur-team.scss';
+@import './components/footer.scss';
