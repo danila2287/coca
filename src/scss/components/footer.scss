@@ -1,54 +1,63 @@
 .footer {
-  padding: 112px 0px 58px 0px;
-  background-color: var(--neutral-color-60);
+  padding: 112px 0 58px;
   color: #fff;
+  background-color: var(--neutral-color-60);
+
   @include mobile {
     padding-top: 62px;
   }
 
   &__head {
     @include flex-align-center;
-    margin-bottom: 138px;
     justify-content: space-between;
+    margin-bottom: 138px;
+
     @include tablet {
+      gap: 40px;
       flex-direction: column;
       align-items: flex-start;
-      gap: 40px;
       margin-bottom: 84px;
     }
 
     @include mobile {
       align-items: center;
-      text-align: center;
       margin-bottom: 64px;
+      text-align: center;
     }
+
     @include small-mobile {
       margin-bottom: 44px;
     }
   }
+
   &__title {
     margin-bottom: 24px;
-    font-size: 64px;
     font-weight: 600;
+    font-size: 64px;
     line-height: 120%;
+
     @include tablet {
       font-size: 54px;
     }
+
     @include mobile {
       font-size: 42px;
     }
   }
+
   &__descr {
     max-width: 543px;
     font-weight: 500;
     line-height: 32px;
     color: var(--neutral-color-50);
   }
+
   &__link {
     padding: 16px 32px;
-    background-color: #fff;
     color: #1d1e25;
+    background-color: #fff;
   }
+
   &__logo {
     display: inline-block;
     margin-bottom: 19px;
@@ -57,6 +66,7 @@
       margin-bottom: 0;
     }
   }
+
   &__body {
     @include flex-all-sb;
     margin-bottom: 56px;
@@ -70,15 +80,17 @@
       @include small-tablet {
         gap: 10px;
         flex-direction: column;
-        text-align: center;
         width: 100%;
+        text-align: center;
       }
     }
+
     @include tablet {
+      gap: 40px;
       flex-direction: column;
       align-items: flex-start;
-      gap: 40px;
     }
+
     &-descr {
       max-width: 202px;
       font-weight: 500;
@@ -89,6 +101,7 @@
         max-width: 600px;
       }
     }
+
     @include mobile {
       flex-direction: column-reverse;
     }
@@ -98,10 +111,11 @@
     @include tablet;
     width: 100%;
   }
+
   &__list {
     @include flex-align-center;
-    justify-content: end;
     gap: 93.33px;
+    justify-content: end;
 
     @include mini-desctop {
       gap: 53px;
@@ -113,14 +127,17 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
     @include mobile {
-      text-align: center;
       gap: 13px 60px;
+      text-align: center;
     }
   }
+
   &__item {
     min-width: 143px;
   }
+
   &__item-title {
     margin-bottom: 24px;
     font-weight: 700;
@@ -134,8 +151,15 @@
 
   &__sublist {
     display: flex;
-    flex-direction: column;
     gap: 16px;
+    flex-direction: column;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    @include small-mobile {
+      padding: 0 15px;
+      max-height: 0;
+    }
   }
 
   &__subitem {
@@ -169,35 +193,40 @@
       }
     }
   }
+
   &__bottom {
     @include flex-align-center;
     @include flex-all-sb;
-    padding-top: 40px;
-    border-top: 1px solid #606060;
-    flex-wrap: wrap;
     gap: 20px 40px;
+    flex-wrap: wrap;
+    border-top: 1px solid #606060;
+    padding-top: 40px;
 
     @include tablet {
       justify-content: center;
     }
+
     &__item {
       @include tablet {
         align-self: start;
       }
+
       @include mobile {
         min-width: 143px;
       }
     }
+
     &-lists {
       @include flex-align-center;
       gap: 20px;
       justify-content: space-between;
-      max-width: 584px;
       width: 100%;
+      max-width: 584px;
 
       @include tablet {
         max-width: 480px;
       }
+
       @include mobile {
         gap: 20px;
         flex-direction: column;
@@ -218,11 +247,13 @@
         justify-content: center;
       }
     }
+
     &-link {
       position: relative;
       font-weight: 500;
       line-height: 20px;
       color: #fff;
+
       &::after {
         content: '';
         position: absolute;
@@ -246,12 +277,14 @@
         }
       }
     }
+
     &__copyright {
       font-weight: 500;
       line-height: 20px;
       color: #fff;
     }
   }
+
   &__social {
     @include flex-align-center;
     gap: 24px;
@@ -259,22 +292,13 @@
     @include tablet {
       gap: 18px;
     }
+
     &-link {
       transition: opasity var(--transition);
 
       &:hover {
         opacity: 0.8;
       }
-    }
-  }
-
-  &__sublist {
-    transition: max-height 0.3s ease;
-    overflow: hidden;
-
-    @include small-mobile {
-      max-height: 0;
-      padding: 0 15px;
     }
   }
 
@@ -289,12 +313,12 @@
   }
 
   &__schow {
-    max-height: none !important;
     overflow: visible;
+    max-height: none !important;
 
     @include small-mobile {
-      max-height: 0 !important;
       overflow: hidden;
+      max-height: 0 !important;
     }
   }
 

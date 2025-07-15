@@ -1,5 +1,6 @@
 .testimonials {
   padding: 69px 0 160px;
+  
   @include mobile {
     padding: 39px 0 70px;
   }
@@ -13,10 +14,12 @@
       flex-direction: column;
       text-align: center;
     }
+    
     @include mobile {
       gap: 12px;
       margin-bottom: 40px;
     }
+    
     &-title {
       max-width: 530px;
       font-weight: 600;
@@ -28,20 +31,24 @@
         max-width: 650px;
       }
     }
+    
     &-descr {
       max-width: 376px;
       font-weight: 500;
       line-height: 32px;
       color: var(--neutral-color-150);
+      
       @include tablet {
         max-width: 450px;
       }
     }
   }
+  
   &__rating {
     @include flex-align-center;
     gap: 8px;
     margin-bottom: 19px;
+    
     &-num {
       display: block;
       font-weight: 500;
@@ -49,6 +56,7 @@
       color: var(--neutral-color-100);
     }
   }
+  
   &__slider {
     max-width: 898px;
   }
@@ -65,6 +73,7 @@
       @include mini-desctop {
         transform: translateY(-7px);
       }
+      
       @include mobile {
         display: none;
       }
@@ -74,8 +83,8 @@
   &__comment {
     &-text {
       margin-bottom: 40px;
-      font-size: 40px;
       font-weight: 500;
+      font-size: 40px;
       line-height: 130%;
       letter-spacing: -1px;
       color: var(--neutral-color-100);
@@ -87,8 +96,8 @@
       font-style: normal;
 
       &-avatar {
-        border-radius: 50%;
         overflow: hidden;
+        border-radius: 50%;
       }
 
       &-name {
@@ -97,6 +106,7 @@
         line-height: 26px;
         color: var(--neutral-color-100);
       }
+      
       &-professions {
         font-weight: 500;
         line-height: 26px;
@@ -115,46 +125,53 @@
       transform: translateY(5px);
     }
   }
+  
   &__btn {
     @include flex-all-center;
+    
     & svg path {
       transition: fill var(--transition);
     }
+    
     &--prev {
-      border-radius: 50%;
       border: 1px solid var(--neutral-color-40);
+      border-radius: 50%;
       width: 50px;
       height: 50px;
       transition:
         background-color var(--transition),
         border-color var(--transition);
-      @include small-mobile {
+      
+        @include small-mobile {
         width: 40px;
         height: 40px;
       }
 
       &:hover {
-        background-color: var(--neutral-color-100);
         border-color: var(--neutral-color-100);
+        background-color: var(--neutral-color-100);
 
         & svg path {
           fill: var(--neutral-color-10);
         }
       }
     }
+    
     &--next {
-      transform: rotate(-180deg);
-      border-radius: 50%;
       border: 1px solid var(--neutral-color-40);
+      border-radius: 50%;
       width: 50px;
       height: 50px;
+      transform: rotate(-180deg);
+      
       @include small-mobile {
         width: 40px;
         height: 40px;
       }
+      
       &:hover {
-        background-color: var(--neutral-color-100);
         border-color: var(--neutral-color-100);
+        background-color: var(--neutral-color-100);
 
         & svg path {
           fill: var(--neutral-color-10);

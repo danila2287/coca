@@ -1,5 +1,5 @@
 .partners {
-  padding: 108px 0px;
+  padding: 108px 0;
 
   @include mobile {
     padding: 86px 0;
@@ -16,6 +16,7 @@
       text-align: center;
     }
   }
+  
   &__title {
     font-weight: 500;
     line-height: 32px;
@@ -34,8 +35,10 @@
       }
     }
   }
+  
   &__list {
     gap: 10px 30px;
+    
     @include flex-all-center;
     @include flex-align-center;
     flex-wrap: wrap;
@@ -44,11 +47,12 @@
       gap: 10px;
     }
   }
+  
   &__item {
     @include flex-all-center;
+    border-radius: 16px;
     width: 160px;
     height: 90px;
-    border-radius: 16px;
     background-color: #fff;
   }
 }

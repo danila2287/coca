@@ -12,22 +12,26 @@
     @include tablet {
       padding-bottom: 86px;
     }
+    
     &::before {
       top: -20px;
     }
+    
     &::after {
       bottom: -320px;
     }
   }
+  
   &__title {
     display: inline-block;
     margin-bottom: 24px;
-    padding: 4px 12px;
     border-radius: 16px;
+    padding: 4px 12px;
     font-weight: 600;
     line-height: 24px;
-    background-color: #1463ff1a;
     color: var(--primary-color-30);
+    background-color: #1463ff1a;
+    
     @include small-mobile{
       margin-bottom: 18px;
     }
@@ -57,23 +61,26 @@
       border-radius: 50%;
       width: 20px;
       height: 20px;
-      opacity: 0.6;
       background: var(--primary-color-30);
+      opacity: 0.6;
       transition:
         left var(--transition),
         opacity var(--transition);
     }
+    
     &-wrapper {
       @include flex-all-center;
-      gap: 14px;
-      margin-bottom: 186px;
       display: inline-flex;
-      justify-content: center;
+      gap: 14px;
       align-items: center;
+      justify-content: center;
+      margin-bottom: 186px;
       width: 100%;
+      
       @include tablet {
         margin-bottom: 100px;
       }
+      
       @include mobile{
         margin-bottom: 60px;
       }
@@ -88,6 +95,7 @@
     &-checkbox {
       appearance: none;
     }
+    
     &:has(&-checkbox:checked) {
       &::before {
         left: 22px;
@@ -98,10 +106,12 @@
 
   &__plans {
     @include flex-all-sb;
+    
     @include tablet {
-      flex-direction: column;
       gap: 20px;
+      flex-direction: column;
     }
+    
     &-item {
       border: 1px solid var(--neutral-color-30);
       border-radius: 16px;
@@ -117,15 +127,18 @@
       }
 
       &:nth-child(2) {
-        transform: translateY(-64px);
-        box-shadow: 0 16px 24px 0 rgba(30, 30, 30, 0.08);
-        background: var(--neutral-color-90);
         border: 1px solid var(--primary-color-30);
+        box-shadow: 0 16px 24px 0 rgba
+        (30, 30, 30, 0.08);
+        background: var(--neutral-color-90);
+        transform: translateY(-64px);
+        
         @include tablet {
-          transform: translateY(0px);
+          transform: translateY(0 px);
         }
       }
     }
+    
     &-icon {
       @include flex-all-center;
       margin-bottom: 16px;
@@ -137,20 +150,23 @@
 
     &-title {
       margin-bottom: 8px;
-      font-size: 24px;
       font-weight: 600;
+      font-size: 24px;
       line-height: 34px;
       color: var(--neutral-color-100);
+      
       &-bg {
         color: #fff;
       }
     }
+    
     &-descr {
       margin-bottom: 24px;
       font-weight: 500;
       line-height: 26px;
       color: var(--neutral-color-150);
     }
+    
     &-price {
       margin-bottom: 24px;
       font-weight: 500;
@@ -162,11 +178,13 @@
         line-height: 120%;
         letter-spacing: -2px;
         color: var(--neutral-color-100);
+        
         &-bg {
           color: #fff;
         }
       }
     }
+    
     &-list {
       margin-bottom: 40px;
 
@@ -175,57 +193,69 @@
         font-weight: 700;
         line-height: 24px;
         color: var(--neutral-color-100);
+        
         &-bg {
           color: #fff;
         }
       }
+      
       &-item {
         @include flex-align-center;
         gap: 10.4px;
         font-weight: 500;
         line-height: 26px;
         color: var(--neutral-color-100);
+        
         &-bg {
           color: #fff;
         }
+        
         &:not(:last-child) {
           margin-bottom: 16px;
         }
 
         &--inaccess {
-          color: var(--neutral-color-150);
           text-decoration: line-through;
+          color: var(--neutral-color-150);
+          
           & svg path {
             fill: var(--neutral-color-150);
           }
         }
       }
     }
+    
     &-btn {
-      padding: 16px 35px;
       border: 1px solid var(--neutral-color-40);
       border-radius: 100px;
+      padding: 16px 35px;
       font-weight: 600;
       line-height: 24px;
       color: var(--neutral-color-100);
       transition: opacity var(--transition);
+      
       &-bg {
-        background-color: #fff;
         color: #1d1e25;
+        background-color: #fff;
       }
+      
       &:hover {
         opacity: 0.8;
       }
+      
       &-wrapper {
         text-align: center;
       }
     }
+    
     &-head {
       @include flex-all-sb;
+      
       &-icon {
         background-color: var(--primary-color-30);
       }
     }
+    
     &-action {
       border-radius: 100px;
       padding: 6px 12px;

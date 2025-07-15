@@ -16,10 +16,12 @@
     @include tablet {
       margin-bottom: 60px;
     }
+
     @include mobile {
       margin-bottom: 30px;
     }
   }
+
   &__map {
     @include flex-all-sb;
     gap: 86px;
@@ -27,12 +29,15 @@
     @include tablet {
       flex-direction: column;
     }
+
     @include mobile {
       gap: 36px;
     }
   }
+
   &__contacts {
     max-width: 176px;
+
     @include tablet {
       @include flex-all-center;
       gap: 40px;
@@ -47,27 +52,33 @@
     @include mobile {
       gap: 20px;
     }
+
     &-item {
       border-bottom: 1px solid var(--neutral-color-50);
       padding-bottom: 14px;
+
       &:not(:last-child) {
         margin-bottom: 40px;
+
         @include tablet {
           margin-bottom: 0;
         }
       }
+      
       &-title {
         margin-bottom: 8px;
         font-weight: 700;
         line-height: 32px;
         color: var(--neutral-color-100);
       }
+      
       &-descr {
         margin-bottom: 20px;
         font-weight: 400;
         line-height: 24px;
         color: var(--neutral-color-150);
       }
+      
       &-link {
         margin-bottom: 14px;
         font-weight: 500;

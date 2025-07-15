@@ -1,12 +1,15 @@
 .hero {
-  padding: 95px 0 160px;
   overflow-x: hidden;
+  padding: 95px 0 160px;
+
   @include tablet {
     padding: 85px 0 120px;
   }
+
   @include mobile {
     padding: 65px 0 70px;
   }
+
   &__title {
     margin-bottom: 53px;
     font-weight: 700;
@@ -19,13 +22,16 @@
       text-align: center;
     }
   }
+
   &__subtitle {
     margin-bottom: 138px;
+
     & br {
       @include mini-desctop {
         display: none;
       }
     }
+
     @include tablet {
       margin-bottom: 120px;
     }
@@ -33,18 +39,21 @@
     @include small-tablet {
       margin-bottom: 100px;
     }
+
     @include mobile {
       margin-bottom: 80px;
       text-align: center;
     }
+
     @include small-mobile {
       margin-bottom: 60px;
     }
   }
+
   &__list {
     @include flex-align-center;
-    margin-bottom: 80px;
     gap: 44px;
+    margin-bottom: 80px;
 
     @include tablet {
       gap: 16px 20px;
@@ -58,47 +67,42 @@
   }
 
   &__link {
-    padding: 3px;
     position: relative;
+    padding: 3px;
     font-weight: 500;
     line-height: 24px;
+    color: var(--neutral-color-150);
     transition: var(--transition);
 
     &:hover {
-      color: var(--neutral-color-100);
       position: relative;
+      color: var(--neutral-color-100);
+
       &::before {
         content: '';
         position: absolute;
+        bottom: 0;
         left: 0;
-        bottom: 0px;
-        height: 2px;
         width: 100%;
+        height: 2px;
         background-color: var(--neutral-color-100);
       }
     }
-    color: var(--neutral-color-150);
+
     &-content {
       color: var(--neutral-color-100);
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-        height: 2px;
-        width: 100%;
-        background-color: var(--neutral-color-100);
-      }
     }
   }
+
   &-decor {
     &::before {
-      top: 0px;
+      top: 0;
       left: 100px;
 
       @include mini-desctop {
         left: 80px;
       }
+
       @include small-tablet {
         top: 20px;
         left: 40px;
@@ -106,76 +110,84 @@
     }
 
     &::after {
-      right: 0;
       top: 400px;
+      right: 0;
     }
   }
+
   &__slider {
     position: relative;
+
     &-btns {
       @include flex-all-center;
       position: absolute;
       top: 170px;
       left: 45.4%;
-      transform: translateX(-68%);
       z-index: var(--z-index-2);
       border-radius: 50%;
       width: 80px;
       height: 80px;
       background-color: #fff;
+      transform: translateX(-68%);
 
       @include mini-desctop {
         left: 54.5%;
       }
+
       @include tablet {
         display: none;
       }
+
       @include mobile {
+        top: 90px;
+        left: 96.1%;
         display: flex;
         width: 50px;
         height: 50px;
-        top: 90px;
-        left: 96.1%;
       }
     }
   }
+  /* stylelint-disable-next-line rule-empty-line-before */
   &__article {
     max-width: 515px;
-    // @include mini-desctop {
-    //   max-width: 483px;
-    // }
+
     &-img {
+      display: block;
       margin-bottom: 16px;
-      width: 100%; // Заполняет контейнер по ширине
-      height: auto; // Автоматическая высота для сохранения пропорций
-      aspect-ratio: 515/428; // Фиксированное соотношение сторон (как у макета)
-      object-fit: cover; // Обрезает лишнее, сохраняя заполнение
-      display: block; // Убирает лишние отступы снизу
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 515/428;
     }
+
     &-head {
       @include flex-all-sb;
       margin-bottom: 24px;
       font-weight: 400;
       line-height: 150%;
       color: var(--neutral-color-150);
+
       @include small-mobile {
         flex-direction: column;
         align-items: flex-start;
       }
     }
+
     &-title {
       margin-bottom: 16px;
       font-weight: 700;
       line-height: 40px;
       letter-spacing: -1px;
       color: var(--neutral-color-100);
-      @include mobile{
+
+      @include mobile {
         font-size: 24px;
       }
     }
+
     &-descr {
-      font-size: 20px;
       font-weight: 500;
+      font-size: 20px;
       line-height: 30px;
       color: var(--neutral-color-150);
 

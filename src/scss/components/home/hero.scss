@@ -1,19 +1,20 @@
 .hero {
-  padding: 87px 0 141px;
   overflow-x: hidden;
+  padding: 87px 0 141px;
 
   @include mini-desctop {
     padding: 67px 0 121px;
   }
-@include mobile{
+
+  @include mobile{
   min-height: calc(100dvh - 109px);
 }
   
 
   &__inner {
     @include flex-justify-between;
-    align-items: flex-end;
     gap: 15px;
+    align-items: flex-end;
 
     @include mini-desctop {
       gap: 50px;
@@ -29,6 +30,7 @@
       max-width: 617px;
     }
   }
+  
   &__title {
     margin-bottom: 114px;
     font-weight: 700;
@@ -40,21 +42,26 @@
     @include mini-desctop {
       margin-bottom: 74px;
     }
+    
     @include tablet {
       margin-bottom: 44px;
       font-size: 60px;
     }
+    
     @include mobile {
       margin-bottom: 38px;
       font-size: 48px;
     }
+    
     @include small-mobile {
       margin-bottom: 30px;
       font-size: 38px;
     }
   }
+  
   &__subtitle {
     margin-bottom: 69px;
+    
     & br {
       @include mini-desctop {
         display: none; 
@@ -69,18 +76,20 @@
     @include mini-desctop {
       justify-content: center;
     }
+    
     @include small-mobile {
       gap: 20px;
       flex-direction: column;
     }
   }
+  
   &__input {
-    min-width: 280px;
-    padding-bottom: 23px;
     border-bottom: 1px solid var(--neutral-color-120);
+    padding-bottom: 23px;
+    min-width: 280px;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: left;
     color: var(--neutral-color-60);
     background-color: transparent;
@@ -88,9 +97,10 @@
     @include small-tablet {
       padding-bottom: 13px;
     }
+    
     @include mobile {
-      max-width: 180px;
       min-width: 100px;
+      max-width: 180px;
     }
   }
 
@@ -103,6 +113,7 @@
       padding: 12px 32px;
     }
   }
+  
   &__right {
     position: relative;
     margin-right: 20px;
@@ -113,10 +124,10 @@
   }
 
   &__sales {
-    border-radius: 8px;
     margin-bottom: 29px;
+    border-radius: 8px;
     padding: 20px;
-    box-shadow: 20px 40px 80px 0px rgba(89, 96, 135, 0.12);
+    box-shadow: 20px 40px 80px 0 rgba (89, 96, 135, 0.12);
     background-color: #fff;
 
     @include small-desctop {
@@ -125,12 +136,12 @@
 
     &-title {
       margin-bottom: 16px;
-      color: #1d1e25;
-      font-size: 20px;
       font-weight: 700;
+      font-size: 20px;
       line-height: 30px;
       letter-spacing: -0.5px;
       text-align: left;
+      color: #1d1e25;
     }
 
     &-img {
@@ -144,11 +155,11 @@
     position: absolute;
     top: -60px;
     right: -140px;
-    border-radius: 8px;
-    padding: 16px 18px 16px 18px;
     display: inline-block;
-    box-shadow: 20px 40px 80px 0px rgba(45, 51, 81, 0.12);
-    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 16px 18px;
+    box-shadow: 20px 40px 80px 0 rgba (45, 51, 81, 0.12);
+    background: rgb (255, 255, 255);
 
     @include small-desctop {
       top: -140px;
@@ -156,7 +167,7 @@
     }
 
     @include mini-desctop {
-      top: 0px;
+      top: 0;
       right: -100px;
     }
 
@@ -172,38 +183,37 @@
   &__stats {
     border-radius: 8px;
     padding: 20px 28px;
-    box-shadow: 20px 40px 80px 0px #2d33511f;
+    box-shadow: 20px 40px 80px 0 #2d33511f;
     text-align: left;
     background: #000;
 
     &-head {
       &-th {
-        font-size: 14px;
         font-weight: 600;
+        font-size: 14px;
         line-height: 20px;
-        letter-spacing: 0px;
         color: #5c616f;
       }
     }
 
     &-body {
       &-td {
-        white-space: nowrap;
-        font-size: 20px;
         font-weight: 700;
+        font-size: 20px;
         line-height: 26px;
-        letter-spacing: 0px;
+        white-space: nowrap;
         color: #fff;
 
         &:nth-child(1) {
           padding-right: 80px;
         }
       }
+      
       &-num {
         display: inline-block;
         margin-right: 3px;
-        font-size: 14px;
         font-weight: 600;
+        font-size: 14px;
         line-height: 20px;
 
         &--green {
@@ -218,6 +228,7 @@
               no-repeat;
           }
         }
+        
         &--red {
           color: #e35454;
 
@@ -230,12 +241,13 @@
           }
         }
       }
+      
       &-text {
-        color: #5c616e;
-        font-size: 14px;
         font-weight: 400;
+        font-size: 14px;
         line-height: 22px;
         letter-spacing: -0.5px;
+        color: #5c616e;
       }
     }
   }

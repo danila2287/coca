@@ -1,25 +1,30 @@
 .articles2 {
   padding: 160px 0;
+
   @include mini-desctop {
     padding: 120px 0;
   }
+
   @include tablet {
     padding: 100px 0;
   }
-  @include mobile{
+
+  @include mobile {
     padding: 80px 0;
   }
+
   &__head {
     @include flex-all-sb;
     margin-bottom: 80px;
 
     @include mobile {
-      margin-bottom: 40px;
-      flex-direction: column;
       gap: 20px;
+      flex-direction: column;
+      margin-bottom: 40px;
       text-align: center;
     }
   }
+
   &__title {
     margin-bottom: 24px;
     font-weight: 600;
@@ -27,6 +32,7 @@
     letter-spacing: -2px;
     color: var(--neutral-color-100);
   }
+
   &__descr {
     max-width: 435px;
     font-weight: 500;
@@ -37,12 +43,14 @@
   &__nav {
     @include flex-all-sb;
     gap: 5px;
-    max-width: 116px;
     width: 100%;
-@include small-mobile{
+    max-width: 116px;
+
+    @include small-mobile {
       max-width: 100px;
     }
   }
+
   &-button-prev,
   &-button-next {
     @include flex-all-center;
@@ -51,23 +59,27 @@
     width: 50px;
     height: 50px;
     background-color: var(--neutral-color-100);
+
     svg {
-      path#Icon {
+      path {
         fill: var(--neutral-color-10);
         fill-opacity: 1;
       }
     }
-    @include small-mobile{
+
+    @include small-mobile {
       width: 40px;
       height: 40px;
     }
   }
+
   &-button-next {
     transform: rotate(180deg);
   }
+
   &__article {
-    max-width: 407px;
     width: 100%;
+    max-width: 407px;
 
     &-img {
       margin-bottom: 24px;
@@ -90,8 +102,8 @@
     }
 
     &-btn {
-      border: 1px solid var(--neutral-color-40);
       display: block;
+      border: 1px solid var(--neutral-color-40);
       padding: 16px 20px;
       max-width: 175px;
       color: var(--neutral-color-100);
@@ -105,14 +117,15 @@
 }
 
 .swiper-button-disabled {
+  background-color: #fff;
+  opacity: 0.8;
   transition:
     background-color,
     opacity,
     fill var(--transition);
-  opacity: 0.8;
-  background-color: #fff;
+
   svg {
-    path#Icon {
+    path {
       fill: var(--neutral-color-40);
       fill-opacity: 1;
     }

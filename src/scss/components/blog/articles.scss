@@ -10,33 +10,40 @@
   &__wrapper-bottom {
     display: flex;
     gap: 32px;
+
     @include mobile{
       flex-wrap: wrap;
       text-align: center;
     }
   }
+
   &__wrapper-top {
     align-items: flex-start;
+
     @include mobile{
       margin-bottom: 32px;
     }
   }
+
   &__wrapper-bottom {
-    margin-top: -82px;
     align-items: flex-end;
+    margin-top: -82px;
+
     @include mobile{
       margin-top: 0;
     }
   }
 
   &__item {
-    max-width: 584px;
     width: 100%;
+    max-width: 584px;
+
     &-img {
       margin-bottom: 24px;
-      max-width: 584px;
       width: 100%;
+      max-width: 584px;
     }
+
     &-title {
       margin-bottom: 24px;
       font-weight: 600;
@@ -48,6 +55,7 @@
         text-underline-offset: 6px;
       }
     }
+    
     &-descr {
       font-weight: 500;
       line-height: 32px;

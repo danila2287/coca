@@ -1,9 +1,11 @@
 .features {
   // padding: 160px 120px 94px 120px;
-  padding: 160px 0px 94px;
+  padding: 160px 0 94px;
+
   @include mobile {
-    padding: 60px 0px 64px;
+    padding: 60px 0 64px;
   }
+
   &__inner {
     @include flex-all-sb;
     gap: 15px;
@@ -23,9 +25,11 @@
       // text-align: center;
     }
   }
+
   &__left {
     position: relative;
   }
+
   &__stat {
     position: absolute;
     right: 36px;
@@ -38,28 +42,32 @@
       right: 16px;
       bottom: 20px;
     }
+
     @include small-mobile {
-      padding: 14px;
-      max-width: 240px;
       right: 12px;
       bottom: 12px;
+      padding: 14px;
+      max-width: 240px;
     }
+
     &-head {
       @include flex-all-sb;
     }
+
     &-title {
       font-weight: 600;
       line-height: 24px;
-      color: rgb(29, 30, 37);
+      color: rgb (29, 30, 37);
     }
+
     &-item {
-      padding: 22px 0px 18px 0px;
-      position: relative;
       @include flex-align-center;
+      position: relative;
       gap: 26px;
+      padding: 22px 0 18px;
 
       @include small-mobile {
-        padding: 16px 0px 14px 0px;
+        padding: 16px 0 14px;
       }
 
       &-first {
@@ -68,30 +76,33 @@
           position: absolute;
           bottom: 0;
           left: 0;
-          width: 100%;
           border: 0.73px solid #ededed;
+          width: 100%;
         }
       }
+
       &-img {
         @include small-mobile {
           width: 65px;
         }
       }
+
       &-title {
         margin-bottom: 6px;
-        font-size: 10.2px;
         font-weight: 500;
+        font-size: 10.2px;
         line-height: 150%;
-        color: rgb(126, 132, 146);
+        color: rgb (126, 132, 146);
       }
+
       &-price {
-        margin-bottom: 9px;
         @include flex-align-center;
         gap: 19px;
+        margin-bottom: 9px;
 
         &-nam {
-          font-size: 23.32px;
           font-weight: 700;
+          font-size: 23.32px;
           line-height: 120%;
           color: #1d1e25;
 
@@ -99,30 +110,31 @@
             font-size: 18px;
           }
         }
+
         &-proc {
           @include flex-align-center;
           gap: 5px;
-          font-size: 10.2px;
           font-weight: 500;
+          font-size: 10.2px;
           line-height: 150%;
           color: #1d1e25;
         }
       }
+
       &-descr {
-        font-size: 8.74px;
         font-weight: 400;
+        font-size: 8.74px;
         line-height: 11px;
         color: #7e8492;
       }
     }
   }
+
   &__right {
     max-width: 557px;
 
     @include mini-desctop {
       max-width: 900px;
-    }
-    @include tablet {
     }
   }
 
@@ -137,6 +149,7 @@
       margin-bottom: 20px;
     }
   }
+
   &__descr {
     margin-bottom: 40px;
     max-width: 360px;
@@ -147,9 +160,8 @@
     @include mini-desctop {
       max-width: 700px;
     }
-    @include tablet {
-    }
   }
+
   &__list {
     max-width: 353px;
 
@@ -157,16 +169,20 @@
       max-width: 550px;
     }
   }
+
   &__item {
-    margin-bottom: 32px;
     @include flex-align-center;
     gap: 19px;
+    margin-bottom: 32px;
+
     @include mobile {
       margin-bottom: 22px;
     }
+
     &:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
+
     &-text {
       font-weight: 500;
       line-height: 32px;
